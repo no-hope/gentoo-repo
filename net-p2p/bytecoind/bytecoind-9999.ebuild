@@ -68,7 +68,7 @@ src_compile() {
 	OPTS+=("USE_SYSTEM_LEVELDB=1")
 
 	cd src || die
-	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" ${PN}
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" bitcoind
 }
 
 src_test() {
@@ -78,6 +78,7 @@ src_test() {
 }
 
 src_install() {
+	mv src/bitcoind src/bytecoind
 	dobin src/${PN}
 
 	insinto /etc/bytecoin
