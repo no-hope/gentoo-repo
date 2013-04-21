@@ -10,8 +10,8 @@ MyP="${MyPN}-${MyPV}"
 
 DESCRIPTION="Original Bytecoin crypto-currency wallet for automated services"
 HOMEPAGE="http://bytecoin.in/"
-EGIT_BRANCH="0.8.1"
-EGIT_REPO_URI="git://github.com/bryan-mills/bytecoin.git"
+#EGIT_BRANCH="0.8.1"
+EGIT_REPO_URI="git://github.com/FeatherCoin/FeatherCoin.git"
 SRC_URI=""
 
 LICENSE="MIT ISC GPL-2"
@@ -68,7 +68,7 @@ src_compile() {
 	OPTS+=("USE_SYSTEM_LEVELDB=1")
 
 	cd src || die
-	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" bitcoind
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" -f makefile.unix "${OPTS[@]}" ${PN}
 }
 
 src_install() {
