@@ -39,7 +39,8 @@ DOCS="doc/README"
 
 #S="${WORKDIR}/bitcoin-bitcoind-stable"
 
-#src_prepare() {
+src_prepare() {
+        epatch "${FILESDIR}/fix_ipv4.diff"
 #	cd src || die
 
 #	local filt= yeslang= nolang=
@@ -65,7 +66,7 @@ DOCS="doc/README"
 #	filt="bytecoin_\\(${filt:2}\\)\\.qm"
 #	sed "/${filt}/d" -i 'qt/bitcoin.qrc'
 #	einfo "Languages -- Enabled:$yeslang -- Disabled:$nolang"
-#}
+}
 
 src_configure() {
 	OPTS=()
