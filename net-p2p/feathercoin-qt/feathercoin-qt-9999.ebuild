@@ -40,7 +40,7 @@ DOCS="doc/README"
 #S="${WORKDIR}/bitcoin-bitcoind-stable"
 
 src_prepare() {
-        epatch "${FILESDIR}/fix_ipv4.diff"
+	use ipv6 || epatch "${FILESDIR}/fix_ipv4.diff"
 #	cd src || die
 
 #	local filt= yeslang= nolang=
