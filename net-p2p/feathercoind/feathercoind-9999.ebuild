@@ -43,6 +43,10 @@ pkg_setup() {
 	enewuser "${UG}" -1 -1 /var/lib/${UG} "${UG}"
 }
 
+src_prepare() {
+	use ipv6 || epatch "${FILESDIR}/fix_ipv4.diff"
+}
+
 src_compile() {
 	OPTS=()
 
