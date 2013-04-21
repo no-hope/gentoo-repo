@@ -43,11 +43,6 @@ pkg_setup() {
 	enewuser "${UG}" -1 -1 /var/lib/${UG} "${UG}"
 }
 
-src_prepare() {
-	epatch "${FILESDIR}/0.8.0-sys_leveldb.patch"
-	rm -r src/leveldb
-}
-
 src_compile() {
 	OPTS=()
 
