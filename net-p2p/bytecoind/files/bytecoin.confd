@@ -1,0 +1,10 @@
+# Config file for /etc/init.d/bytecoind
+
+# owner of bitcoind process (don't change, must be existing)
+BYTECOIN_USER="bytecoin"
+
+# See http://www.bitcoin.org/smf/index.php?topic=1063
+BYTECOIN_OPTS="${BITCOIN_OPTS}"
+
+# nice level
+NICELEVEL="19"

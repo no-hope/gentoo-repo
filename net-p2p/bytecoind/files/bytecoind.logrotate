@@ -1,0 +1,7 @@
+/var/lib/bytecoin/.bytecoin/debug.log {
+	weekly
+	sharedscripts
+	postrotate
+		killall -HUP bitcoind
+	endscript
+}
