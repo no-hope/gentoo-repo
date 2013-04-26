@@ -2,11 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.7.4.ebuild,v 1.2 2012/12/03 02:27:14 ssuominen Exp $
 
-EAPI="4"
+EAPI="5"
 
-EGIT_REPO_URI="git://github.com/ckolivas/cgminer.git"
-EGIT_COMMIT="v${PV}"
-inherit versionator git-2 autotools
+inherit versionator autotools
 
 MY_PV="$(replace_version_separator 3 -)"
 S="${WORKDIR}/${PN}-${PV}"
@@ -14,10 +12,11 @@ S="${WORKDIR}/${PN}-${PV}"
 DESCRIPTION="Bitcoin CPU/GPU/FPGA miner in C"
 HOMEPAGE="https://bitcointalk.org/index.php?topic=28402.0"
 
-SRC_URI=""
+RESTRICT="nomirror"
+SRC_URI="https://github.com/ckolivas/cgminer/archive/v${PV}.tar.gz -> cgminer-${PV}.tar.gz"
 
 LICENSE="GPL-3"
-SLOT="0"
+SLOT="2"
 KEYWORDS="x86 amd64"
 
 IUSE="+adl altivec bitforce +cpumining examples hardened icarus modminer ncurses +opencl padlock scrypt sse2 sse2_4way sse4 +udev ztex"
