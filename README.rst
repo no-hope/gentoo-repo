@@ -8,4 +8,4 @@ Layman
 
 .. code-block:: bash
 
-    layman -f -o http://godin-gentoo-repository.googlecode.com/svn/trunk/layman.xml -a no-hope
+    layman -f -o https://raw.github.com/no-hope/gentoo-repo/master/repositories.xml -a no-hope
