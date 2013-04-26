@@ -1,7 +1,7 @@
 Gentoo repo with a hope
 =======================
 
-This repo is just yet another funky gentoo repo.
+This repo is just yet another funky gentoo overlay.
 
 Layman
 ------
