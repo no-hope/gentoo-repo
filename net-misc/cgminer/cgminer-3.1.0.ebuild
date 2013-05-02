@@ -87,16 +87,16 @@ src_install() {
 		dodoc FPGA-README
 	fi
 	if use modminer; then
-		insinto /usr/lib/cgminer/modminer
+		insinto /usr/lib/cgminer-${PV}/modminer
 		doins bitstreams/*.ncd
 		dodoc bitstreams/COPYING_fpgaminer
 	fi
 	if use opencl; then
-		insinto /usr/lib/cgminer
+		insinto /usr/lib/cgminer-${PV}
 		doins *.cl
 	fi
 	if use ztex; then
-		insinto /usr/lib/cgminer/ztex
+		insinto /usr/lib/cgminer-${PV}/ztex
 		doins bitstreams/*.bit
 		dodoc bitstreams/COPYING_ztex
 	fi
