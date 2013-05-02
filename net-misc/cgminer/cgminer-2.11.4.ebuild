@@ -114,6 +114,7 @@ src_configure() {
 }
 
 src_install() {
+	mv cgminer cgminer-${PV}
 	dobin cgminer-${PV}
 	dodoc AUTHORS NEWS README API-README
 	if use scrypt; then
