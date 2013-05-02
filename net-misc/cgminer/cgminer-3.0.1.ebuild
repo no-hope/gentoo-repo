@@ -73,7 +73,7 @@ src_configure() {
 		$(use_with udev libudev) \
 		$(use_enable ztex)
 	# sanitize directories
-	sed -i 's~^\(\#define CGMINER_PREFIX \).*$~\1"'"${EPREFIX}/usr/lib/cgminer"'"~' config.h
+	sed -i 's~^\(\#define CGMINER_PREFIX \).*$~\1"'"${EPREFIX}/usr/lib/cgminer-${PV}"'"~' config.h
 }
 
 src_install() {
