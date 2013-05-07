@@ -84,7 +84,7 @@ src_configure() {
 
 	echo "${OPTS[@]}"
 
-	eqmake4 "bitcoin-qt.pro" "${OPTS[@]}"
+	eqmake4 "${PN}.pro" "${OPTS[@]}"
 }
 
 src_compile() {
