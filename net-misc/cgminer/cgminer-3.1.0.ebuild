@@ -79,12 +79,15 @@ src_configure() {
 src_install() {
 	mv cgminer cgminer-${PV}
 	dobin cgminer-${PV}
-	dodoc AUTHORS NEWS LICENSE COPYING README API-README ASIC-README FPGA-README GPU-README SCRYPT-README
+	dodoc AUTHORS NEWS LICENSE COPYING README API-README
 	if use scrypt; then
 		dodoc SCRYPT-README
 	fi
-	if use icarus || use bitforce; then
+	if use icarus || use bitforce || use modminer || use ztex; then
 		dodoc FPGA-README
+	fi
+	if use bitforce; then
+		dodoc ASIC-README
 	fi
 	if use modminer; then
 		insinto /usr/lib/cgminer-${PV}/modminer
@@ -94,6 +97,7 @@ src_install() {
 	if use opencl; then
 		insinto /usr/lib/cgminer-${PV}
 		doins *.cl
+		dodoc GPU-README
 	fi
 	if use ztex; then
 		insinto /usr/lib/cgminer-${PV}/ztex
