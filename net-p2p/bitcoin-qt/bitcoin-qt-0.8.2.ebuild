@@ -50,7 +50,7 @@ S="${WORKDIR}/${MyP}"
 
 src_prepare() {
 	use 1stclassmsg && epatch "${WORKDIR}/0.7.1-1stclassmsg.patch"
-	epatch "${FILESDIR}/0.8.0-sys_leveldb.patch"
+	epatch "${FILESDIR}/0.8.2-sys_leveldb.patch"
 	rm -r src/leveldb
 
 	cd src || die
