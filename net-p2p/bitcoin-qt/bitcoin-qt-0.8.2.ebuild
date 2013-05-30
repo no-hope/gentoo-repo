@@ -44,7 +44,7 @@ DEPEND="${RDEPEND}
 	>=app-shells/bash-4.1
 "
 
-DOCS="doc/README"
+DOCS="doc/README.md"
 
 S="${WORKDIR}/${MyP}"
 
