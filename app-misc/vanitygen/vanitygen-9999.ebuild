@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~x86"
 IUSE="opencl"
-inherit db-use eutils qt4-r2 versionator git-2 toolchain-funcs
+inherit db-use eutils versionator git-2 toolchain-funcs
 
 RDEPEND="
     dev-libs/libpcre
