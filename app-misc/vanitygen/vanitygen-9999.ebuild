@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/app-text/ansifilter/ansifilter-1.7.ebuild,v 1.3 2013/03/02 19:40:05 hwoarang Exp $
 
-EAPI=5
+EAPI=7
 
 DESCRIPTION="Standalone command line vanity bitcoin address generator"
 HOMEPAGE="https://github.com/samr7/vanitygen"
@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~x86"
 IUSE="opencl"
-inherit db-use eutils versionator git-2 toolchain-funcs
+inherit db-use eutils git-r3 toolchain-funcs
 
 RDEPEND="
     dev-libs/libpcre
