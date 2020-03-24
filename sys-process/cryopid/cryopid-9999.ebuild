@@ -2,16 +2,14 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=4
+EAPI=7
 
-inherit eutils linux-info git-2
+inherit eutils linux-info git-r3
 
 DESCRIPTION="Process freezing utility"
 HOMEPAGE="http://cryopid.berlios.de"
 EGIT_REPO_URI="git://github.com/maaziz/cryopid.git"
 SRC_URI=""
-#"amd64? ( http://dagobah.ucc.asn.au/wacky/${P}-x86_64.tar.gz )
-#	x86? ( http://dagobah.ucc.asn.au/wacky/${P}-i386.tar.gz )"
 
 LICENSE="BSD-2"
 SLOT="0"

@@ -1,9 +1,9 @@
-EAPI=4
+EAPI=7
 
 DB_VER="4.8"
 
 LANGS="ca_ES cs da de en es es_CL et eu_ES fa fa_IR fi fr_CA fr_FR he hr hu it lt nb nl pl pt_BR ro_RO ru sk sr sv tr uk zh_CN zh_TW"
-inherit db-use eutils qt4-r2 versionator git-2
+inherit db-use eutils git-r3 qmake-utils
 
 DESCRIPTION="An end-user Qt4 GUI for the Bytecoin crypto-currency"
 HOMEPAGE="http://bytecoin.in/"
@@ -26,9 +26,9 @@ RDEPEND="
 		net-libs/miniupnpc
 	)
 	sys-libs/db:$(db_ver_to_slot "${DB_VER}")[cxx]
-	dev-qt/qtgui:4
+	dev-qt/qtgui:5
 	dbus? (
-		dev-qt/qtdbus:4
+		dev-qt/qtdbus:5
 	)
 "
 DEPEND="${RDEPEND}
@@ -82,9 +82,7 @@ src_configure() {
 	OPTS+=("BDB_INCLUDE_PATH=$(db_includedir "${DB_VER}")")
 	OPTS+=("BDB_LIB_SUFFIX=-${DB_VER}")
 
-	echo "${OPTS[@]}"
-
-	eqmake4 "bitcoin-qt.pro" "${OPTS[@]}"
+	eqmake5 "bitcoin-qt.pro" "${OPTS[@]}" || die
 }
 
 src_compile() {
@@ -101,11 +99,10 @@ src_test() {
 }
 
 src_install() {
-	qt4-r2_src_install
-	ls -la ${S}/bitcoin-qt
 	mv ${S}/bitcoin-qt ${S}/${PN}
 	ls -la ${S}/${PN}
 	dobin ${PN}
+
 	insinto /usr/share/pixmaps
 	newins "share/pixmaps/bitcoin.ico" "${PN}.ico"
 	make_desktop_entry ${PN} "Bytecoin-Qt" "/usr/share/pixmaps/${PN}.ico" "Network;P2P"
