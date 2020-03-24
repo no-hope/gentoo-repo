@@ -20,6 +20,6 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}
 
 src_install() {
-    mv v2ray-plugin_* ${PN}
-    dobin ${PV}
+    mv v2ray-plugin_* ${PN} || die
+    dobin ${PN} || die
 }
