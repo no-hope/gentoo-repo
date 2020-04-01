@@ -17,7 +17,7 @@ inherit db-use eutils git-r3 toolchain-funcs
 
 RDEPEND="
     dev-libs/libpcre
-    dev-libs/libgcrypt
+    dev-libs/openssl-compat:0.9.8
 "
 DEPEND="${RDEPEND}"
 
