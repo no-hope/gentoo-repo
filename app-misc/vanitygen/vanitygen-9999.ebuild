@@ -21,7 +21,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/${PN}-${PV}
 
 pkg_setup() {
 	myopts=(
