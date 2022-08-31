@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-2.7.4.ebuild,v 1.2 2012/12/03 02:27:14 ssuominen Exp $
 
-EAPI="5"
+EAPI=8
 
-inherit versionator autotools
+inherit autotools
 
-MY_PV="$(replace_version_separator 3 -)"
+MY_PV="$(ver_rs 3 -)"
 S="${WORKDIR}/${PN}-${PV}"
 
 DESCRIPTION="Bitcoin CPU/GPU/FPGA miner in C"

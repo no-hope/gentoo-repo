@@ -1,8 +1,8 @@
-EAPI="4"
+EAPI=7
 
 DB_VER="4.8"
 
-inherit db-use eutils versionator toolchain-funcs git-r3
+inherit db-use eutils toolchain-funcs git-r3
 
 MyPV="${PV/_/}"
 MyPN="bytecoin"

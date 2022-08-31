@@ -1,4 +1,5 @@
-EAPI="5"
+EAPI=8
+
 S="${WORKDIR}/${PN}-${PV}/wtmp_editor"
 
 DESCRIPTION="Simple wtmp file editor written in C"
