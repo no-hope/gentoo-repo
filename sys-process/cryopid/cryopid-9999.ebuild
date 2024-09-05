@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=7
+EAPI=8
 
-inherit eutils linux-info git-r3
+inherit linux-info git-r3
 
 DESCRIPTION="Process freezing utility"
 HOMEPAGE="http://cryopid.berlios.de"

@@ -1,9 +1,9 @@
-EAPI=7
+EAPI=8
 
 DB_VER="4.8"
 
 LANGS="ca_ES cs da de en es es_CL et eu_ES fa fa_IR fi fr_CA fr_FR he hr hu it lt nb nl pl pt_BR ro_RO ru sk sr sv tr uk zh_CN zh_TW"
-inherit db-use eutils qmake-utils git-r3
+inherit db-use qmake-utils git-r3
 
 DESCRIPTION="An end-user Qt4 GUI for the Bytecoin crypto-currency"
 HOMEPAGE="http://bytecoin.in/"
