@@ -8,7 +8,7 @@ DESCRIPTION="Standalone command line vanity bitcoin address generator"
 HOMEPAGE="https://github.com/samr7/vanitygen"
 
 SRC_URI=""
-EGIT_REPO_URI="git://github.com/samr7/vanitygen.git"
+EGIT_REPO_URI="https://github.com/samr7/vanitygen.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~x86"
